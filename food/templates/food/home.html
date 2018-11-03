@@ -1,0 +1,15 @@
+{% extends "food/base.html" %}
+{% block content %}
+{%for post in posts %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{post.resturant }}</a>
+
+    </div>
+    <h2><a class="article-title" >{{ post.address }}</a></h2>
+    <a class="article-content" href="{{ post.yelp }}">Yelp</a>
+  </div>
+</article>
+{% endfor %}
+{%endblock content %}
